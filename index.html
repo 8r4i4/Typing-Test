@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Typing Speed Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="title">Typing Speed Test</h1>
+      <div class="theme-toggle" title="Dark mode">
+          <label class="switch">
+            <input checked="true" id="checkbox" type="checkbox" />
+            <span class="slider">
+              <div class="star star_1"></div>
+              <div class="star star_2"></div>
+              <div class="star star_3"></div>
+              <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+                <path
+                  transform="matrix(.77976 0 0 .78395-299.99-418.63)"
+                  fill="#fff"
+                  d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925"
+                ></path>
+              </svg>
+            </span>
+          </label>
+        </div>
+    </header>
+    <div class="guide-banner">
+      Press Enter to start and stop. Type the prompt shown in the area; green means correct, red means incorrect.
+    </div>
+
+    <main class="container">
+      <section class="card typing-card">
+        <div class="card-header">
+          <h2 class="card-title">Type Here</h2>
+          <div class="controls">
+            <div class="timer" id="timer">60s</div>
+            <button id="startBtn" class="btn primary">Start Test (Enter)</button>
+          </div>
+        </div>
+        <div class="progress">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <div class="typing-container">
+          <div id="overlay" class="typing-overlay" aria-hidden="true"></div>
+          <textarea id="typingArea" class="typing-area" rows="5" disabled></textarea>
+        </div>
+      </section>
+
+      <section class="stats-grid">
+        <div class="stat card">
+          <div class="stat-label">WPM</div>
+          <div id="wpm" class="stat-value">0</div>
+        </div>
+        <div class="stat card">
+          <div class="stat-label">CPM</div>
+          <div id="cpm" class="stat-value">0</div>
+        </div>
+        <div class="stat card">
+          <div class="stat-label">Accuracy</div>
+          <div id="accuracy" class="stat-value">100%</div>
+        </div>
+        <div class="stat card">
+          <div class="stat-label">Errors</div>
+          <div id="errors" class="stat-value">0</div>
+        </div>
+      </section>
+
+      
+
+      <details class="metrics card">
+        <summary class="result-title">About Metrics</summary>
+        <p><strong>WPM</strong> (Words Per Minute): Number of correct characters typed divided by 5, scaled per minute.</p>
+        <p><strong>CPM</strong> (Characters Per Minute): Number of correct characters typed per minute.</p>
+        <p><strong>Accuracy</strong>: Percentage of correct characters out of all characters you typed.</p>
+        <p><strong>Errors</strong>: Count of characters that don’t match the prompt (including extra characters beyond the prompt).</p>
+      </details>
+    </main>
+
+    <footer class="app-footer">
+    </footer>
+
+    <script src="script.js?v=3"></script>
+  </body>
+</html>
