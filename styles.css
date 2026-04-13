@@ -6,13 +6,13 @@
   --border: #e2e8f0;
   --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
   --accent: #3b82f6;
-  --wpm-color: #10b981;     /* emerald */
-  --cpm-color: #8b5cf6;     /* violet */
-  --accuracy-color: #60a5fa;/* blue */
-  --errors-color: #ef4444;  /* red */
+  --wpm-color: #10b981;
+  --cpm-color: #8b5cf6;
+  --accuracy-color: #60a5fa;
+  --errors-color: #ef4444;
 }
 
-/* Dark theme variables */
+
 [data-theme="dark"] {
   --bg: #0b1220;
   --text: #e5e7eb;
@@ -27,12 +27,12 @@
   --errors-color: #f87171;
 }
 
-/* Dark theme overrides */
+/* Dark mode */
 [data-theme="dark"] .card { background: var(--card) }
 [data-theme="dark"] .card img { background: #0b1220 }
 [data-theme="dark"] .btn-outline { background: transparent }
 
-/* Dark mode: make inputs black */
+
 [data-theme="dark"] input,
 [data-theme="dark"] textarea,
 [data-theme="dark"] select {
@@ -84,7 +84,6 @@ body {
 }
 
 /* Theme Switch */
-/* The switch - the box around the slider */
 .switch {
   font-size: 17px;
   position: relative;
@@ -95,14 +94,12 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-/* The slider */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -280,12 +277,12 @@ body {
   padding: 12px;
   font-size: 16px;
   line-height: 1.6;
-  color: transparent; /* hide raw text; show overlay coloring */
-  -webkit-text-fill-color: transparent; /* keep text hidden even when selected (WebKit) */
+  color: transparent;
+  -webkit-text-fill-color: transparent;
   caret-color: var(--text);
 }
 
-/* Keep textarea text hidden even when user selects it */
+/* Keep textarea text hidden even when user selects it (AI IN THIS ONE) */
 .typing-area::selection {
   color: transparent;
   background: rgba(0, 0, 0, 0.12);
@@ -329,7 +326,6 @@ body {
   font-size: 16px;
 }
 
-/* Result chips */
 .result-chips {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -382,7 +378,6 @@ body {
   font-size: 14px;
 }
 
-/* Adjust responsive layout */
 @media (max-width: 768px) {
   .result-chips { grid-template-columns: repeat(2, 1fr); }
 }
@@ -431,7 +426,7 @@ body {
   margin-top: 24px;
 }
 
-/* Progress ring for accuracy */
+/* Progress cirvle for accuracy */
 .circle {
   position: relative;
 }
